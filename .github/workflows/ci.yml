@@ -96,6 +96,8 @@ jobs:
           sudo ln -s /usr/bin/opt-11 /usr/bin/opt || true
           sudo apt-get install -y python3-tk
           sudo apt-get install -y libboost-all-dev
+          sudo apt-get install python3-pipx
+          sudo pipx ensurepath
 
       - name: "Setup DiscoPoP Profiler - Build"
         run: |
@@ -111,7 +113,7 @@ jobs:
       - name: C++ unit tests
         run: |
           build/test/unit_tests/DiscoPoP_UT
-  
+
   execute_end_to_end_tests:
     runs-on: ubuntu-20.04
     name: Execute end-to-end tests

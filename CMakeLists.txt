@@ -123,7 +123,7 @@ endif()
 # install DiscoPoP python modules
 message(STATUS "Installing DiscoPoP python modules")
 execute_process(
-        COMMAND ${Python3_EXECUTABLE} -m pip install ${DiscoPoP_SOURCE_DIR}
+        COMMAND ${Python3_EXECUTABLE} -m pipx install ${DiscoPoP_SOURCE_DIR}
         RESULT_VARIABLE DP_INSTALLATION_EXIT_CODE
         OUTPUT_VARIABLE DP_INSTALLATION_OUTPUT
 )
